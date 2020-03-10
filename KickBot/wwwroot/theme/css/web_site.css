@@ -1,0 +1,87 @@
+﻿@font-face
+{
+src:url('../fonts/Marker Felt.ttf');
+font-family:Marker Felt;
+}
+
+body {
+}
+/* circle div*/
+.circle_div {
+    border-radius: 50%;
+    background: #55C0D3;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border: 10px solid white;
+    text-align: center;
+    color: white;
+    font-family: Marker Felt;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+}
+.bg_red {
+    background-color: #ff6666;
+}
+
+.rund_border {
+    border-radius: 25px;
+    background: white;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 900px;
+    height: 350px;
+    
+    margin-bottom:100px;
+}
+
+#rund_txt {
+    color: #200B77;
+    font-family: Marker Felt;
+}
+.head_txt {
+    font-family: Marker Felt;
+    letter-spacing: 0;
+    color: #FAF5F5;
+    opacity: 1;
+    top: 111px;
+    left: 201px;
+    width: 344px;
+    height: 162px;
+    margin-top:30px;
+}
+.center_txt {
+    font-family: 'Marker Felt';
+    letter-spacing: 0;
+    color: white;
+    opacity: 1;
+    text-align:center;
+}
+
+.circle_div_blk {
+    border-radius: 50%;
+    background: #6E6E6E;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border: 10px solid #95989A;
+    margin-left: 30px;
+}
+.txt_2 {
+    text-align: center;
+    font: Thin 50px/54px;
+    font-family: Marker Felt;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}

@@ -1,0 +1,227 @@
+﻿@font-face {
+    src: url('../fonts/Marker Felt.ttf');
+    font-family: Marker Felt;
+}
+
+body 
+{
+font-family:Marker Felt;
+}
+
+section {
+    margin: 5px;
+    
+    background-color: lightgrey;
+}
+
+article {
+    margin: 5px;
+    
+    background-color: white;
+}
+
+.text-vertical {
+    top: 50px;
+    left:0px;
+    color: white;
+    position: absolute;
+    display: block;
+    height: 254px;
+    font-weight:bold;
+    font-size:15px;
+    text-align:left;
+}
+.rotate {
+    transform: rotate(-90deg);
+    /* Legacy vendor prefixes that you probably don't need... */
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+
+.bg-black {
+    background-color:black;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-red {
+    background-color: #e60073;
+}
+
+
+.bg-black-yellow-barder {
+    background-color: black;
+    border-top: 30px solid yellow;
+}
+.heading-hello {
+   
+    font: Black 90px/123px Avenir;
+    font-size:40px;
+    font-weight:700;
+    letter-spacing: 0;
+    color: #FFFF5C;
+    opacity: 1;
+}
+/*used for logo left*/
+.logo {
+    top: 23px;
+    left: 102px;
+    width: 109px;
+    height: 109px;
+
+    opacity: 1;
+}
+/*used for logo right*/
+.logo_pic {
+    top: 23px;
+    left: 102px;
+    width: 237px;
+    height: 254px;
+   float:right;
+    opacity: 1;
+}
+
+.header {
+ 
+    font: bold 80px/94px Marker Felt;
+    font-family:Marker Felt;
+    color: white;
+    text-align: center;
+    margin-top:500px;
+
+}
+/*used for hello text heading*/
+.hello2 {
+    color: #55C0D3;
+    text-align: center;
+}
+
+.hello2_black {
+    color: black;
+    text-align: center;
+}
+
+    /*used for main heading 1 Planning white heading*/
+    .heading {
+    font: bold 50px/64px Marker Felt;
+    font-family:Marker Felt;
+    color: white;
+    text-align: center;
+    margin-left:80px;
+}
+.heading_black {
+    font: bold 50px/64px Marker Felt;
+    font-family:Marker Felt;
+    color: black;
+    text-align: center;
+    margin-left: 80px;
+}
+.heading2_black
+   {
+    color: black;
+    text-align: center;
+}
+
+.heading2 {
+    color: white;
+    text-align: center;
+}
+.heading-center {
+
+    text-align: center;
+    margin-top: 70px;
+    font: Bold 60px/70px ;
+    font-family:Marker Felt;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+/*used for main heading 2 like GATER ALL THE DETAILS & RUN A FEASIBILITY TEST*/
+.heading-center-2 {
+    text-align: center;
+    font: Bold 60px/70px ;
+    font-family:Marker Felt;
+    letter-spacing: 0;
+    color: #2B1D79;
+    opacity: 1;
+}
+/*used for report text values*/
+.report-txt {
+    text-align: center;
+    font: Light 50px/81px Noteworthy;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+/*used for persons title name */
+.titlenameheading {
+    text-align: center;
+    font: bold 30px/35px Marker Felt;
+    font-family:Marker Felt;
+    letter-spacing: 0;
+    color: #FFEB00;
+    margin-top: 250px;
+    opacity: 1;
+}
+/*used for person information description text */
+.pers-info-p {
+    font: Thin 40px/44px Marker Felt;
+    font-family:Marker Felt;
+    letter-spacing: 0;
+    color: #F8F8F5;
+    opacity: 1;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.txt_btw {
+    color: #D35599;
+    
+}
+.hello_bottom {
+    color: #55C0D3;
+    text-align: right;
+    margin-top:80px;
+}
+.txt
+{
+    text-align:center;
+    color:black;
+}
+
+.bg-sky-black-bordrer {
+    background-color: #80ffff;
+    border-top: 30px solid black;
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    border-bottom: 30px solid white;
+}
+.bg-sky {
+    background-color: #80ffff;
+}
+.bg-yellow {
+    background-color: #ffff00;
+    border-top: 30px solid black;
+}
+
+    .img_b_t {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+.hello_white {
+    color: white;
+    text-align: center;
+}
+
+    
+    

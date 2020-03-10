@@ -1,0 +1,52 @@
+﻿
+body {
+    
+}
+/* circle div*/
+.circle_div {
+    border-radius: 50%;
+    background: #55C0D3;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    color: white;
+    font-family: Marker Felt;
+    
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+   
+    display: inline-block;
+    
+}
+.dot_pink {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    margin-top:150px;
+    margin-left:10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+    .bg_red {
+    background-color: #ff9999;
+}
+
+.rund_border {
+    border-radius: 25px;
+    background: white;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+
+
+
+

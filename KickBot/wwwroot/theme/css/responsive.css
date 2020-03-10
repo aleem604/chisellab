@@ -1,0 +1,465 @@
+﻿@font-face {
+    src: url('../fonts/Marker Felt.ttf');
+    font-family: Marker Felt;
+}
+
+body {
+    font-family: Marker Felt;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@font-face {
+    src: url('../assets/fonts/Marker Felt.ttf');
+    font-family: Marker Felt;
+}
+
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    border-top: 30px solid yellow;
+}
+
+img_header {
+    width: 10%;
+    height: auto;
+}
+
+
+
+img_title {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .img_title {
+        text-align:center;
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .img_center {
+        
+        width: 25%;
+        height:2%;
+    }
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+.header_text {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    
+}
+/*used for main heading 1 Planning white heading*/
+.heading {
+    font: bold 50px/64px Marker Felt;
+    font-family: Marker Felt;
+    color: white;
+    text-align: center;
+    
+}
+
+/*used for sub heading 1 Planning white heading*/
+.sub_heading {
+    font: bold 30px/44px Marker Felt;
+    font-family: Marker Felt;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .heading {
+        font: bold 15px/14px Marker Felt;
+        font-family: Marker Felt;
+        color: white;
+        text-align: center;
+    }
+}
+
+    @media only screen and (max-width: 500px) {
+        .sub_heading {
+            font: bold 8px/10px Marker Felt;
+            font-family: Marker Felt;
+            color: white;
+            text-align: center
+        }
+    }
+
+.header_text {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    font: bold 15px/14px Marker Felt;
+    font-family: Marker Felt;
+   
+}
+.header_text_w {
+    background-color: white;
+    color: #ffffff;
+    padding: 15px;
+    font: bold 15px/14px Marker Felt;
+    font-family: Marker Felt;
+}
+    .heading3 {
+    font: bold 10px/8px Marker Felt;
+    font-family: Marker Felt;
+    color: white;
+    text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    .heading3 {
+        font: bold 8px/6px Marker Felt;
+        font-family: Marker Felt;
+        color: white;
+        text-align: center;
+    }
+}
+
+.container {
+margin-left:350px !important;
+background:black !important;
+}
+@media only screen and (max-width: 500px) {
+    .container {
+        margin-left:100px !important;
+       background:black !important;
+    }
+}
+.header2 {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    
+}
+.header2_ddboarder {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    border-top:30px solid yellow;
+    border-bottom:30px solid yellow;
+}
+
+.header_white {
+    background-color: white;
+    color: #ffffff;
+    padding: 15px;
+}
+
+img_slide {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .img_slide {
+        float: left;
+        width: 70%;
+        margin-top:10px;
+
+    }
+}
+
+.circle {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    background: #55C0D3;
+    border: 10px solid white;
+    text-align: center;
+    color: white;
+    font-family: Marker Felt;
+   
+}
+@media only screen and (max-width: 600px) {
+    .circle {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        background: #55C0D3;
+        border: 10px solid white;
+        text-align: center;
+        color: white;
+        font-family: Marker Felt;
+    }
+}
+.bg-white {
+    background-color: white;
+}
+
+
+.heading-center {
+    text-align: center;
+    font: Bold 60px/70px;
+    font-family: Marker Felt;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+/*used for main heading 2 like GATER ALL THE DETAILS & RUN A FEASIBILITY TEST*/
+.heading-center-2 {
+    text-align: center;
+    font: Bold 60px/70px;
+    font-family: Marker Felt;
+    letter-spacing: 0;
+    color: #2B1D79;
+    opacity: 1;
+}
+.reports {
+    margin-left: 350px !important;
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .reports {
+        margin-left: 80px !important;
+       
+    }
+}
+.bg-sky-black-bordrer {
+    background-color: #80ffff;
+    border-top: 30px solid black;
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    border-bottom: 30px solid white;
+}
+.bg-sky {
+    background-color: #80ffff;
+}
+.bg-yellow {
+    background-color: #ffff00;
+    border:10px solid black;
+}
+.bg-red {
+    background-color: #e60073;
+}
+
+.img_b_t {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.headtxt {
+    color: white;
+    margin-left: 250px;
+}
+@media only screen and (max-width: 500px) {
+    .headtxt {
+        color: white;
+        margin-left: 30px !important;
+    }
+}
+
+.center_txt {
+    font-family: 'Marker Felt';
+    letter-spacing: 0;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    margin-left: 70px;
+}
+
+@media only screen and (max-width: 500px) {
+    .center_txt {
+        font-family: 'Marker Felt';
+        letter-spacing: 0;
+        color: white;
+        opacity: 1;
+        text-align: center;
+        
+    }
+}
+
+.circle_div_blk {
+    border-radius: 50%;
+    background: #6E6E6E;
+    padding: 20px;
+    width: 45%;
+    height: 15%;
+    border: 10px solid #95989A;
+    margin-left:120px;
+}
+
+@media only screen and (max-width: 500px) {
+    .circle_div_blk {
+        border-radius: 50%;
+        background: #6E6E6E;
+        padding: 20px;
+        width: 45%;
+        height: 15%;
+        border: 10px solid #95989A;
+        margin-left: 100px;
+    } 
+}
+
+.txt_2 {
+    text-align: center;
+    font: Thin 50px/54px;
+    font-family: Marker Felt;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    margin-top: 50px;
+    opacity: 1;
+}
+
+.responsive {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 20%;
+    }
+}
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
