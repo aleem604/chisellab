@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
-
+var connectedUser = [];
 //Disable send button until connection is established
 document.getElementById("sendButton").disabled = true;
 var input = document.getElementById("messageInput");
@@ -12,37 +12,44 @@ input.addEventListener("keyup", function (event) {
     }
 });
 
-connection.on("ReceiveMessage", function (user, message) {
-
+connection.on("ReceiveMessage", function (user, message, connectionId) {
+    debugger;
+    const result = connectedUser.find(({ id }) => id === connectionId);
+    if (result !== undefined || result !== null) {
+        connectedUser.push({ id: connectionId, name: user });
+    }   
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     var elements = createmyElements(user, msg);
-    document.getElementById("messagesList").appendChild(elements);
-    document.getElementById("messagesListAdmin").appendChild(elements);
+
+    document.getElementById("messagesList").appendChild(elements);   
 });
 
 connection.on("UserConnected", function (connectionId) {
-    var elements = addInChatList(connectionId);
-    document.getElementById("chatList").appendChild(elements);    
+    debugger;
+    var elements = connectedUserFunc(connectionId);
+    document.getElementById("chatList").appendChild(elements);
 });
+
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
+    document.getElementById("userInput").disabled = false;
 }).catch(function (err) {
     return console.error(err.toString());
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    debugger;
     var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
     connection.invoke("SendMessage", user, message).catch(function (err) {
         return console.error(err.toString());
     });
+    document.getElementById("messageInput").value = "";
     event.preventDefault();
 });
 
 function createmyElements(user, message) {
 
-    if (user !== 'admin') {
+    if (user !== 'Admin') {
         var d1 = document.createElement("div");
         d1.setAttribute("class", "row msg_container base_sent");
         var d2a = document.createElement("div");
@@ -59,7 +66,7 @@ function createmyElements(user, message) {
         d1.appendChild(d2a).appendChild(d3).appendChild(p);
         d1.appendChild(d2b).appendChild(img);
     }
-    else if (user === 'admin') {
+    else if (user === 'Admin') {
         var d1 = document.createElement("div");
         d1.setAttribute("class", "row msg_container base_receive");
         var d2a = document.createElement("div");
@@ -81,7 +88,8 @@ function createmyElements(user, message) {
     return d1;
 }
 
-function addInChatList(connectionId) {
+function connectedUserFunc(connectionId) {
+    debugger;
     var d1 = document.createElement("div");
     d1.setAttribute("class", "chat_list active_chat");
     var d2 = document.createElement("div");
@@ -92,12 +100,12 @@ function addInChatList(connectionId) {
     d2b.setAttribute("class", "chat_ib");
     var h = document.createElement("h5");
     var span = document.createElement("span");
-    span.setAttribute("class","chat_date")
+    span.setAttribute("class", "chat_date")
     var p = document.createElement("p");
     p.textContent = connectionId;
     var img = document.createElement("img");
     img.setAttribute("src", "http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg");
-   
+
     d1.appendChild(d2).appendChild(d2a).appendChild(img);
     d2.appendChild(d2b).appendChild(h).appendChild(span).appendChild(p);
     return d1;

@@ -22,7 +22,7 @@ namespace KickBot.Hubs
         }
         public async Task SendMessage(string username, string message)
         {
-            await Clients.All.SendAsync("ReceiveMessage", username, message);
+            await Clients.All.SendAsync("ReceiveMessage", username, message, Context.ConnectionId);
         }
         public async Task SendToAll(string connectionId, string message)
         {
