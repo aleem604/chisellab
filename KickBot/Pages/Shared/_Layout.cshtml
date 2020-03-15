@@ -13,11 +13,20 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    
 </head>
 <body>
 
     @RenderBody()
-    <partial name="~/Pages/_chat.cshtml" />
+
+    @*@if (this.Context.Request.Path.ToString().ToLower().IndexOf("admin") == -1)
+    {
+      
+    }*@
+        <partial name="~/Pages/_chat.cshtml" />
+    
+
     @RenderSection("Scripts", required: false)
+    <script src="~/js/chat.js"></script>
 </body>
 </html>
