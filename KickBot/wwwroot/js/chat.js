@@ -4,9 +4,23 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 var connectedUser = [];
 //Disable send button until connection is established
 //document.getElementById("sendButton").disabled = true;
-document.getElementById('sendButton').style.visibility = 'hidden';
-document.getElementById('messageInput').style.visibility = 'hidden';
-document.getElementById('chartStarted_p').style.visibility = 'hidden';
+document.getElementById('sendButton').style.display = 'none';
+document.getElementById('messageInput').style.display = 'none';
+document.getElementById('chartStarted_p').style.display = 'none';
+
+var chatWindow = document.getElementById("chat_window_1");
+var closeIcon = document.getElementById("spanHide");
+var chatIcon = document.getElementById("startChat");
+closeIcon.addEventListener("click", function (event) {
+    $(chatWindow).css('display', 'none');
+    $(chatIcon).removeAttr('style');
+});
+
+chatIcon.addEventListener("click", function (event) {
+    $(this).css('display', 'none');
+    $(chatWindow).removeAttr('style');
+});
+
 
 var input = document.getElementById("messageInput");
 input.addEventListener("keyup", function (event) {
@@ -33,32 +47,34 @@ connection.start().then(function () {
 });
 document.getElementById("startChatButton").addEventListener("click", function (event) {
     var userName = document.getElementById("userName").value;
-    var userEmail = document.getElementById("userEmail").value;   
-    document.getElementById('userName').style.visibility = 'hidden';
-    document.getElementById('userEmail').style.visibility = 'hidden';
-    document.getElementById('startChatButton').style.visibility = 'hidden';
-    document.getElementById('messageInput').style.visibility = 'visible';
-    document.getElementById('sendButton').style.visibility = 'visible';
-    document.getElementById('chartStarted_p').style.visibility = 'visible';
-    connection.invoke("StartChat", userName, userEmail).catch(function (err) {
-        return console.error(err.toString());
-    });  
-    
-    event.preventDefault();
+    if (userName) {
+        var userEmail = document.getElementById("userEmail").value;
+        document.getElementById('userName').style.display = 'none';
+        document.getElementById('userEmail').style.display = 'none';
+        document.getElementById('startChatButton').style.display = 'none';
+        document.getElementById('messageInput').style.display = 'initial';
+        document.getElementById('sendButton').style.display = 'initial';
+        document.getElementById('chartStarted_p').style.display = 'initial';
+        connection.invoke("StartChat", userName, userEmail).catch(function (err) {
+            return console.error(err.toString());
+        });
 
+        event.preventDefault();
+    }
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {   
     var message = document.getElementById("messageInput").value;
-    message = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    connection.invoke("SendMessage", message).catch(function (err) {
-        return console.error(err.toString());
-    });
-   var elements = createmyElements("send", message);
-    document.getElementById("messagesList").appendChild(elements);
-    document.getElementById("messageInput").value = "";
-    event.preventDefault();
-
+    if (message) {
+        message = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        connection.invoke("SendMessage", message).catch(function (err) {
+            return console.error(err.toString());
+        });
+        var elements = createmyElements("send", message);
+        document.getElementById("messagesList").appendChild(elements);
+        document.getElementById("messageInput").value = "";
+        event.preventDefault();
+    }
 });
 
 function createmyElements(inOut, message) {

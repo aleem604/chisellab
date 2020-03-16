@@ -1,10 +1,12 @@
 ﻿<div class="chat-wrapper">
-    <div class="chat-window" id="chat_window_1">
+    <div class="chat-window" id="chat_window_1" style="display:none;">
         <div class="chat-inner">
             <div class="panel panel-default">
                 <div class="panel-heading top-bar">
                     <div class="panel-inner">
-                        <h5 class="panel-title"><span class="glyphicon glyphicon-comment"></span>Live Chat Support</h5>
+                        <h5 class="panel-title"><span class="glyphicon glyphicon-comment"></span>Live Chat Support
+                        <span class="fa fa-close pull-right cursor-p" id="spanHide"></span>
+                        </h5>
                     </div>
 
                 </div>
@@ -13,7 +15,7 @@
                         Your Live Chat Started With Admin!
                     </p>
                     <input id="userName" type="text" class="form-control" placeholder="Write your name here." style="margin-top:5px" />
-                    <input id="userEmail" type="text" class="form-control" placeholder="Write your email here." style="margin-top:5px" />
+                    <input id="userEmail" type="text" class="form-control" placeholder="Write your email here." style="margin-top:5px; display:none;" />
 
                 </div>
                 <div class="panel-footer">
@@ -28,4 +30,9 @@
             </div>
         </div>
     </div>
+
+    <div id="startChat" class="icon-wrapper">
+        <i class="fa fa-comment-o fa-3x pull-right cursor-p" title="Start chat" style="right: 0.5em;"></i>
+    </div>
+
 </div>

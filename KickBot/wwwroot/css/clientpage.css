@@ -17,6 +17,10 @@
     min-width: 300px;
 }
 
+    .chat-wrapper .panel-footer {
+        background-color: #e5e5e5;
+    }
+
     .chat-wrapper .chat-window > div > .panel {
         border-radius: 5px 5px 10px 10px;
     }
