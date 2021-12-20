@@ -1,2 +1,1 @@
-# chisellab
-ChiseltechLab
+Online chat application using SignalR
